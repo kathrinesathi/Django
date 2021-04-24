@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Django</title>
+  </head>
+  <body>
+    {% for book in Book_list %}
+    <!-- {{ book.name}} -- {{book.desc}} -- {{book.desc}} <br> -->
+    
+    <!-- hardcoded URL -->
+    <!-- <a href="/book/{{book.id}}">{{ book.name}} </a><br> -->
+    
+    {{book.id}}-
+    <a href="{% url 'detail' book.id %}">{{ book.name}} </a><br>
+    {% endfor %}
+  </body>
+</html>
