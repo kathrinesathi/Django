@@ -14,7 +14,7 @@
     <!-- <a href="/book/{{book.id}}">{{ book.name}} </a><br> -->
     
     {{book.id}}-
-    <a href="{% url 'detail' book.id %}">{{ book.name}} </a><br>
+    <a href="{% url 'myapp:detail' book.id %}">{{ book.name}} </a><br>
     {% endfor %}
   </body>
 </html>

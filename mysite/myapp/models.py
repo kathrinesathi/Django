@@ -8,6 +8,7 @@ class Book(models.Model):
     name = models.CharField(max_length=100)
     desc = models.CharField(max_length=300)
     price = models.IntegerField()
+    book_image=models.ImageField(default='default.jpg',upload_to='book_images/')
 
 class lavs(models.Model):
 
